@@ -1,0 +1,16 @@
+{
+    "python.pythonPath": "/opt/airflow/venv/bin/python",  // Путь к Python в контейнере
+    "python.analysis.extraPaths": [                       // Где искать модули
+      "/opt/airflow/dags",
+      "/opt/airflow/scripts",
+      "/opt/airflow/plugins",
+      "/opt/airflow/typings"                             // Для стабов PySpark
+    ],
+    "python.analysis.diagnosticSeverityOverrides": {      // Какие предупреждения скрыть
+      "reportUnusedImport": "none",                       // Не ругаться на неиспользуемые импорты
+      "reportUnusedVariable": "none",                     // Игнорировать неиспользуемые переменные
+      "reportMissingImports": "none"                      // Не выделять "missing imports"
+    },
+    "python.linting.pylintEnabled": false,               // Отключить Pylint
+    "python.linting.flake8Enabled": true                  // Включить Flake8
+  }
