@@ -5,7 +5,6 @@ from datetime import datetime, timedelta, timezone
 import pytz 
 
 API_KEY = os.getenv("ETHERSCAN_API_KEY")
-#API_KEY = 'BDVNV9C94FIC8F87MSKJWSVCEH6D818YR7'
 ETHERSCAN_URL = 'https://api.etherscan.io/api'
 OUTPUT_FILE = '/host_desktop/eth_p2p_transactions.csv'
 MAX_TRANSACTIONS = 10000
