@@ -96,12 +96,9 @@ def main():
 
     print(f"Выгрузка данных за {yesterday_msk.date()} (MSK)")
     print(f"Диапазон времени в UTC: {start_ts} - {end_ts}")
-    print(f"Это соответствует {datetime.fromtimestamp(start_ts)} - {datetime.fromtimestamp(end_ts)} UTC")
 
     start_block = get_block_by_timestamp(start_ts, 'after')
     end_block = get_block_by_timestamp(end_ts, 'before')
-
-    print(f"Диапазон блоков: {start_block} - {end_block}")
 
     transactions = []
     for block_num in range(start_block, end_block + 1):
@@ -131,7 +128,6 @@ def main():
         os.remove(OUTPUT_FILE)
 
     save_to_csv(transactions, OUTPUT_FILE)
-    print(f"Данные сохранены в {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
